@@ -6,7 +6,7 @@ exports.up = async (knex) => {
       .notNullable()
       .unique()
     table.string("password").notNullable()
-    table.boolean("isAdmin").defaultTo(false)
+    table.boolean("admin").defaultTo(false)
   })
   await knex.schema.createTable("regions", (table) => {
     table.increments("id")
