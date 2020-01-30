@@ -6,6 +6,7 @@ exports.up = async (knex) => {
       .notNullable()
       .unique()
     table.string("password").notNullable()
+    table.boolean("isAdmin").defaultTo(false)
   })
   await knex.schema.createTable("regions", (table) => {
     table.increments("id")
@@ -29,7 +30,10 @@ exports.up = async (knex) => {
       .onDelete("CASCADE")
       .onUpdate("CASCADE")
     table.string("name").notNullable()
-    table.string("date").notNullable().unique()
+    table
+      .string("date")
+      .notNullable()
+      .unique()
   })
   await knex.schema.createTable("sets", (table) => {
     table.increments("id")
@@ -50,5 +54,4 @@ exports.down = async (knex) => {
   await knex.schema.dropTableIfExists("exercises")
   await knex.schema.dropTableIfExists("regions")
   await knex.schema.dropTableIfExists("users")
-
 }
