@@ -1,28 +1,28 @@
 ###
-POST http://localhost:4000/auth/register/
+POST http://localhost:4000/api/register/
 content-type: application/json
 
 {
-  "email":"me2@me.com",
+  "email":"me3@me.com",
   "name": "Me",
   "password": "password123"
 }
 
 ###
-POST http://localhost:4000/auth/login/
+POST http://localhost:4000/api/login/
 content-type: application/json
 
 {
-    "email": "me2@me.com",
+    "email": "me3@me.com",
     "password": "password123"
 }
 
 ###
 GET http://localhost:4000/api/user
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA0NTU4NjcsImV4cCI6MTU4MDU0MjI2N30.qYriq37NntovalRdVWQgUjH0T275X8xg2GntADX888g
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA0NTY0MzYsImV4cCI6MTU4MDU0MjgzNn0.vQ3JsI2_il0LvwkA-Mo6-7TEKolzEbK6_FJ5Lvq6GTI
 
 ###
 GET http://localhost:4000/api/users
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA0NTU4NjcsImV4cCI6MTU4MDU0MjI2N30.qYriq37NntovalRdVWQgUjH0T275X8xg2GntADX888g
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA0NTY0MzYsImV4cCI6MTU4MDU0MjgzNn0.vQ3JsI2_il0LvwkA-Mo6-7TEKolzEbK6_FJ5Lvq6GTI

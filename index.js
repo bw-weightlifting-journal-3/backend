@@ -21,7 +21,7 @@ server.use(helmet())
 server.use(express.json())
 server.use(logger())
 
-server.use("/auth/", authRouter)
+server.use("/api/", authRouter)
 server.use("/api/", authenticate, usersRouter)
 server.use("/api/exercises", authenticate, exercisesRouter)
 server.use("/api/sets", authenticate, setsRouter)
