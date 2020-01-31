@@ -6,11 +6,11 @@ const jwtSecret = process.env.JWT_SECRET || "this is my secret passphrase"
 
 router.post("/register", async (req, res, next) => {
   try {
-    const { username, password } = req.body
+    const { email, name, password } = req.body
     const newUser =
-      username && password
-        ? await usersModel.add({ username, password })
-        : res.status(500).json({ message: "Missing username and/or password" })
+      email && password && name
+        ? await usersModel.add({ email, name, password })
+        : res.status(500).json({ message: "Missing email, name and/or password" })
     res.status(201).json(newUser)
   } catch (err) {
     next(err)
@@ -21,7 +21,7 @@ router.post("/login", async (req, res, next) => {
   const generateToken = (user) => {
     const payload = {
       subject: user.id,
-      username: user.username
+      email: user.email
     }
     const options = {
       expiresIn: "1d"
@@ -30,12 +30,12 @@ router.post("/login", async (req, res, next) => {
   }
 
   try {
-    const { username, password } = req.body
-    const user = await usersModel.findBy({ username })
+    const { email, password } = req.body
+    const user = await usersModel.findBy({ email })
     const validated = await bcrypt.compare(password, user.password)
     if (user && validated) {
       const token = generateToken(user)
-      res.status(200).json({ message: `Hi ${user.username}. Here's your token.`, token })
+      res.status(200).json({ message: `Hi ${user.email}. Here's your token.`, token })
     } else {
       res.status(401).json({ message: `Invalid credentials` })
     }
