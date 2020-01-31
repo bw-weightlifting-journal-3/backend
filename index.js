@@ -1,12 +1,12 @@
 const express = require("express")
 const cors = require("cors")
 const helmet = require("helmet")
-const authRouter = require("./routes/auth/auth-router")
-const authenticate = require("./routes/auth/auth-middleware")
-const usersRouter = require("./routes/users/users-router")
-const exercisesRouter = require("./routes/exercises/exercises-router")
-const regionsRouter = require("./routes/regions/regions-router")
-const setsRouter = require("./routes/sets/sets-router")
+const authRouter = require("./routes/auth-router")
+const authenticate = require("./middleware/auth-middleware")
+const usersRouter = require("./routes/users-router")
+const exercisesRouter = require("./routes/exercises-router")
+const regionsRouter = require("./routes/regions-router")
+const setsRouter = require("./routes/sets-router")
 
 const server = express()
 const port = process.env.PORT || 4000

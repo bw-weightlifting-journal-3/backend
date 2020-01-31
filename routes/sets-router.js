@@ -1,6 +1,5 @@
- 
 const express = require("express")
-const setsModel = require("./sets-model")
+const setsModel = require("../models/sets-model")
 
 const router = express.Router()
 

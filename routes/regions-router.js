@@ -1,6 +1,5 @@
- 
 const express = require("express")
-const regionsModel = require("./regions-model")
+const regionsModel = require("../models/regions-model")
 
 const router = express.Router()
 

@@ -1,6 +1,5 @@
- 
-const express = require("express")
-const exercisesModel = require("./exercises-model")
+ const express = require("express")
+const exercisesModel = require("../models/exercises-model")
 
 const router = express.Router()
 
@@ -17,6 +16,15 @@ router.post("/", async (req, res, next) => {
   try {
     const item = await exercisesModel.add(req.body)
     res.status(201).json(item)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.put("/:id", async (req, res, next) => {
+  try {
+    const exercise = await exercisesModel.update(req.body, req.params.id)
+    res.json(exercise)
   } catch (err) {
     next(err)
   }
