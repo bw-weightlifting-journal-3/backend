@@ -45,8 +45,8 @@ exports.up = async (knex) => {
       .inTable("exercise")
       .onDelete("CASCADE")
       .onUpdate("CASCADE")
-    table.int("reps").notNullable()
-    table.int("weight").notNullable()
+    table.integer("reps").notNullable()
+    table.integer("weight").notNullable()
   })
 }
 
