@@ -1,22 +1,21 @@
 const bcrypt = require("bcryptjs")
 const db = require("../../data/dbConfig")
 
-const find = (filter) => {
-  return db("users")
-    .where(filter)
-    .select("id", "username")
+const find = () => {
+  return db("users").select("id", "email", "name")
 }
 
 const findBy = (filter) => {
   return db("users")
     .where(filter)
-    .select(["id", "username", "password"]).first()
+    .select(["id", "email", "password"])
+    .first()
 }
 
 const findById = (id) => {
   return db("users")
     .where({ id })
-    .first("id", "username")
+    .first("id", "email", "name")
 }
 
 const add = async (user) => {
@@ -25,4 +24,9 @@ const add = async (user) => {
   return findById(id)
 }
 
-module.exports = { find, findBy, findById, add }
+const update = async (user, id) => {
+  await db("users").where({id}).update(user)
+  return findById(id)
+}
+
+module.exports = { find, findBy, findById, add, update }

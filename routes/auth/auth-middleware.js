@@ -8,11 +8,11 @@ module.exports = (req, res, next) => {
   if (!token) {
     res.status(401).json(notAllowed)
   }
-  jwt.verify(token, jwtSecret, (err, { sub, email }) => {
+  jwt.verify(token, jwtSecret, (err, payload) => {
     if (err) {
       res.status(401).json(notAllowed)
     } else {
-      req.user = { id: sub, email }
+      req.user = { id: payload.subject, email: payload.email }
     }
   })
   next()
