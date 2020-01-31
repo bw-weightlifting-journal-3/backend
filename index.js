@@ -21,11 +21,11 @@ server.use(helmet())
 server.use(express.json())
 server.use(logger())
 
-server.use("/api/", authenticate, authRouter)
-server.use("/api/", usersRouter)
-server.use("/api/exercises", exercisesRouter)
-server.use("/api/sets", setsRouter)
-server.use("/api/regions", regionsRouter)
+server.use("/auth/", authRouter)
+server.use("/api/", authenticate, usersRouter)
+server.use("/api/exercises", authenticate, exercisesRouter)
+server.use("/api/sets", authenticate, setsRouter)
+server.use("/api/regions", authenticate, regionsRouter)
 
 server.get("/", (req, res) => {
   res.json({ message: "WeightLifting API" })

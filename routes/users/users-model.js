@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs")
-const db = require("../database/dbConfig")
+const db = require("../../data/dbConfig")
 
 const find = (filter) => {
   return db("users")
