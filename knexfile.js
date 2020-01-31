@@ -1,3 +1,7 @@
+const pg = require('pg')
+pg.defaults.ssl = true
+
+
 const sqlite = {
   client: "sqlite3",
   useNullAsDefault: true,
@@ -24,7 +28,7 @@ module.exports = {
   },
   production: {
     client: "pg",
-    connection: process.env.PG_URL,
+    connection: process.env.DATABASE_URL,
     migrations: {
       directory: "./data/migrations"
     },
