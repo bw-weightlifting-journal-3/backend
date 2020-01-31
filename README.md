@@ -6,8 +6,8 @@ Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 
 | Endpoint      | Method | Body                       | Description             |
 | ------------- | ------ | -------------------------- | ----------------------- |
-| /auth/register | POST   | { email, name , password } | Sign up a new user      |
-| /auth/login    | POST   | { email , password }       | Log in an existing user |
+| /api/register | POST   | { email, name , password } | Sign up a new user      |
+| /api/login    | POST   | { email , password }       | Log in an existing user |
 
 ## Regions
 
