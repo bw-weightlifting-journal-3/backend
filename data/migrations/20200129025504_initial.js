@@ -42,7 +42,7 @@ exports.up = async (knex) => {
       .integer("exercise_id")
       .notNullable()
       .references("id")
-      .inTable("exercise")
+      .inTable("exercises")
       .onDelete("CASCADE")
       .onUpdate("CASCADE")
     table.integer("reps").notNullable()
