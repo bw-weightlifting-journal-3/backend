@@ -1,6 +1,6 @@
-# How to run this server locally:
-
 # API reference
+
+Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 
 ## Auth
 
