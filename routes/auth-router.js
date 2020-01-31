@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs")
-const usersModel = require("../users/users-model")
+const usersModel = require("../models/users-model")
 const router = require("express").Router()
 const jwt = require("jsonwebtoken")
 const jwtSecret = process.env.JWT_SECRET || "this is my secret passphrase"
