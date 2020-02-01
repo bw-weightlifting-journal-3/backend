@@ -26,3 +26,32 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6
 GET http://localhost:4000/api/users
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA0NTY0MzYsImV4cCI6MTU4MDU0MjgzNn0.vQ3JsI2_il0LvwkA-Mo6-7TEKolzEbK6_FJ5Lvq6GTI
+
+###
+POST https://bw-weightlifting-journal.herokuapp.com/api/register/
+content-type: application/json
+
+{
+  "email":"me3@me.com",
+  "name": "Me",
+  "password": "password123"
+}
+
+###
+POST https://bw-weightlifting-journal.herokuapp.com/api/login/
+content-type: application/json
+
+{
+    "email": "me3@me.com",
+    "password": "password123"
+}
+
+###
+GET https://bw-weightlifting-journal.herokuapp.com/api/user
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA0NTY0MzYsImV4cCI6MTU4MDU0MjgzNn0.vQ3JsI2_il0LvwkA-Mo6-7TEKolzEbK6_FJ5Lvq6GTI
+
+###
+GET https://bw-weightlifting-journal.herokuapp.com/api/users
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA0NTY0MzYsImV4cCI6MTU4MDU0MjgzNn0.vQ3JsI2_il0LvwkA-Mo6-7TEKolzEbK6_FJ5Lvq6GTI
