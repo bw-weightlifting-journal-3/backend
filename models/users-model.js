@@ -20,7 +20,7 @@ const findById = (id) => {
 
 const add = async ({ email, name, password, admin }) => {
   password = await bcrypt.hash(password, 12)
-  const id = await db("users").insert({ email, name, password, admin }, id)
+  const id = await db("users").insert({ email, name, password, admin }, "id")
   console.log(id)
   return findBy({ email })
 }
