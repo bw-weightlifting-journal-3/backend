@@ -32,9 +32,8 @@ exports.up = async (knex) => {
       .onUpdate("CASCADE")
     table.string("name").notNullable()
     table
-      .string("date")
+      .int("timestamp")
       .notNullable()
-      .unique()
   })
   await knex.schema.createTable("sets", (table) => {
     table.increments("id").primary()

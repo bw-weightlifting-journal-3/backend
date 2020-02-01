@@ -4,19 +4,19 @@ exports.seed = async (knex) => {
     [
       {
         name: "Upper Body",
-        description: "chest, back and shoulders"
+        description: "Chest and shoulders"
       },
       {
         name: "Lower Body",
-        description: "glutes, thighs and calves"
+        description: "Glutes, thighs and calves"
       },
       {
         name: "Arms",
-        description: "arms"
+        description: "Arms"
       },
       {
         name: "Core",
-        description: "abdominal area"
+        description: "Back and abdominal area"
       }
     ]
   )

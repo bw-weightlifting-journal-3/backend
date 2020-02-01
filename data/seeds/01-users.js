@@ -18,11 +18,6 @@ exports.seed = async (knex) => {
         email: "me3@me.com",
         name: "Me 3",
         password: `${await hash('password2')}` 
-      },
-      {
-        email: "me4@me.com",
-        name: "Me 4",
-        password: `${await hash('password3')}`
       }
     ]
   )
