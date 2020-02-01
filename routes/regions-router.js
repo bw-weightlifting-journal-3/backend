@@ -5,8 +5,8 @@ const router = express.Router()
 
 router.get("/", async (req, res, next) => {
   try {
-    const items = await regionsModel.find()
-    res.json(items)
+    const regions = await regionsModel.find()
+    res.json(regions)
   } catch (err) {
     next(err)
   }
@@ -14,8 +14,8 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const items = await regionsModel.findById(req.params.id)
-    res.json(items)
+    const region = await regionsModel.findById(req.params.id)
+    res.json(region)
   } catch (err) {
     next(err)
   }
