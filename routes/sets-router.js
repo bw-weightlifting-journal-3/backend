@@ -5,8 +5,17 @@ const router = express.Router()
 
 router.get("/", async (req, res, next) => {
   try {
-    const items = await setsModel.find()
-    res.json(items)
+    const sets = await setsModel.find()
+    res.json(sets)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.get("/:id", async (req, res, next) => {
+  try {
+    const set = await setsModel.findById(req.params.id)
+    res.json(set)
   } catch (err) {
     next(err)
   }
@@ -14,8 +23,8 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const item = await setsModel.add(req.body)
-    res.status(201).json(item)
+    const set = await setsModel.add(req.body)
+    res.status(201).json(set)
   } catch (err) {
     next(err)
   }
@@ -23,9 +32,9 @@ router.post("/", async (req, res, next) => {
 
 router.delete("/:id", async (req, res, next) => {
   try {
-    const item = await setsModel.findById(req.params.id)
+    const set = await setsModel.findById(req.params.id)
     await setsModel.remove(req.params.id)
-    res.status(204).json({message: `${item.name} has been deleted`})
+    res.status(204).json({message: `${set.name} has been deleted`})
   } catch (err) {
     next(err)
   }

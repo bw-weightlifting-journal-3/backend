@@ -5,8 +5,8 @@ const router = express.Router()
 
 router.get("/", async (req, res, next) => {
   try {
-    const items = await exercisesModel.find()
-    res.json(items)
+    const exercises = await exercisesModel.find()
+    res.json(exercises)
   } catch (err) {
     next(err)
   }
@@ -14,8 +14,8 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const items = await exercisesModel.findById(req.params.id)
-    res.json(items)
+    const exercises = await exercisesModel.findById(req.params.id)
+    res.json(exercises)
   } catch (err) {
     next(err)
   }
@@ -23,8 +23,8 @@ router.get("/:id", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const item = await exercisesModel.add(req.body)
-    res.status(201).json(item)
+    const exercise = await exercisesModel.add(req.body)
+    res.status(201).json(exercise)
   } catch (err) {
     next(err)
   }
@@ -41,9 +41,9 @@ router.put("/:id", async (req, res, next) => {
 
 router.delete("/:id", async (req, res, next) => {
   try {
-    const item = await exercisesModel.findById(req.params.id)
+    const exercise = await exercisesModel.findById(req.params.id)
     await exercisesModel.remove(req.params.id)
-    res.status(204).json({message: `${item.name} has been deleted`})
+    res.status(204).json({message: `${exercise.name} has been deleted`})
   } catch (err) {
     next(err)
   }
