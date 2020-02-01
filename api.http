@@ -57,3 +57,23 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6
   "name": "Deadlift",
   "timestamp": 1580533729
 }
+
+###
+GET https://bw-weightlifting-journal.herokuapp.com/api/sets
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDcwNDYsImV4cCI6MTU4MDYzMzQ0Nn0.mWP5uW6ELnG3SBKlWW0tXsMtuDpqbgFDvQiX-vgvsTE
+###
+GET https://bw-weightlifting-journal.herokuapp.com/api/sets/1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDcwNDYsImV4cCI6MTU4MDYzMzQ0Nn0.mWP5uW6ELnG3SBKlWW0tXsMtuDpqbgFDvQiX-vgvsTE
+
+###
+POST https://bw-weightlifting-journal.herokuapp.com/api/sets/
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDcwNDYsImV4cCI6MTU4MDYzMzQ0Nn0.mWP5uW6ELnG3SBKlWW0tXsMtuDpqbgFDvQiX-vgvsTE
+
+{
+  "exercise_id": 1,
+  "reps": 4,
+  "weight": "125"
+}
