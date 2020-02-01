@@ -20,9 +20,9 @@ const findById = (id) => {
 
 const add = async (user) => {
   user.password = await bcrypt.hash(user.password, 12)
-  const [id] = await db("users").insert(user)
-  console.log(id)
-  return findById(id)
+  const id = await db("users").insert(user)
+  console.log(id[0])
+  return findById(id[0])
 }
 
 const update = async (user, id) => {
