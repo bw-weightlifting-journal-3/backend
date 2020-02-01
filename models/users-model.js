@@ -21,6 +21,7 @@ const findById = (id) => {
 const add = async (user) => {
   user.password = await bcrypt.hash(user.password, 12)
   const id = await db("users").insert(user)
+  console.log(id)
   return findById(id)
 }
 
