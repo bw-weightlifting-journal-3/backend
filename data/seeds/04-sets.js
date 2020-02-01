@@ -1,5 +1,5 @@
 exports.seed = async (knex) => {
-  await knex("exercises").insert([
+  await knex("sets").insert([
     {
       reps: "10",
       weight: "100",
