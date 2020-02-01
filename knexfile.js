@@ -1,5 +1,4 @@
-const pg = require('pg')
-
+const pg = require("pg")
 
 const sqlite = {
   client: "sqlite3",
@@ -27,6 +26,7 @@ module.exports = {
   },
   production: {
     client: "pg",
+    useNullAsDefault: true,
     connection: process.env.DATABASE_URL,
     migrations: {
       directory: "./data/migrations"
