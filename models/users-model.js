@@ -18,15 +18,17 @@ const findById = (id) => {
     .first("id", "email", "name")
 }
 
-const add = async (user) => {
-  user.password = await bcrypt.hash(user.password, 12)
-  const id = await db("users").insert(user)
-  console.log(id[0])
-  return findById(id[0])
+const add = async ({ email, name, password, admin }) => {
+  password = await bcrypt.hash(password, 12)
+  const id = await db("users").insert({ email, name, password, admin })
+  console.log(id)
+  return findBy({ email })
 }
 
 const update = async (user, id) => {
-  await db("users").where({id}).update(user)
+  await db("users")
+    .where({ id })
+    .update(user)
   return findById(id)
 }
 
