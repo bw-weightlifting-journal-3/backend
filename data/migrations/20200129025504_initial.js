@@ -1,6 +1,6 @@
 exports.up = async (knex) => {
   await knex.schema.createTable("users", (table) => {
-    table.increments("id")
+    table.increments("id").primary()
     table
       .string("email")
       .notNullable()
@@ -10,12 +10,12 @@ exports.up = async (knex) => {
     table.boolean("admin").defaultTo(false)
   })
   await knex.schema.createTable("regions", (table) => {
-    table.increments("id")
+    table.increments("id").primary()
     table.string("name").notNullable()
     table.string("description")
   })
   await knex.schema.createTable("exercises", (table) => {
-    table.increments("id")
+    table.increments("id").primary()
     table
       .integer("user_id")
       .notNullable()
@@ -37,7 +37,7 @@ exports.up = async (knex) => {
       .unique()
   })
   await knex.schema.createTable("sets", (table) => {
-    table.increments("id")
+    table.increments("id").primary()
     table
       .integer("exercise_id")
       .notNullable()
