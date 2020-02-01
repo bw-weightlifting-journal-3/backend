@@ -1,5 +1,6 @@
 const bcrypt = require("bcryptjs")
 const db = require("../data/dbConfig")
+const exercisesModel = require("./exercises-model")
 
 const find = () => {
   return db("users").select("id", "email", "name")
@@ -12,10 +13,20 @@ const findBy = (filter) => {
     .first()
 }
 
-const findById = (id) => {
-  return db("users")
+const findById = async (id) => {
+  const user = await db("users")
     .where({ id })
     .first("id", "email", "name")
+  const exercises = await db("exercises")
+    .where("user_id", id)
+    .select("id", "name", "timestamp")
+  const withSets = Promise.all(
+    exercises.map(async (exercise) => {
+      const sets = await exercisesModel.findById(exercise.id)
+      return await { ...exercise, sets }
+    })
+  )
+  return { ...user, exercises: await withSets }
 }
 
 const add = async ({ email, name, password, admin }) => {
@@ -31,4 +42,10 @@ const update = async (user, id) => {
   return findById(id)
 }
 
-module.exports = { find, findBy, findById, add, update }
+const remove = (id) => {
+  return db("users")
+    .where({ id })
+    .del()
+}
+
+module.exports = { find, findBy, findById, add, update, remove }
