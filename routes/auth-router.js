@@ -6,10 +6,10 @@ const jwtSecret = process.env.JWT_SECRET || "this is my secret passphrase"
 
 router.post("/register", async (req, res, next) => {
   try {
-    const { email, name, password } = req.body
+    const { email, name, password, admin } = req.body
     const newUser =
       email && password && name
-        ? await usersModel.add({ email, name, password })
+        ? await usersModel.add({ email, name, password, admin })
         : res.status(500).json({ message: "Missing email, name and/or password" })
     res.status(201).json(newUser)
   } catch (err) {
