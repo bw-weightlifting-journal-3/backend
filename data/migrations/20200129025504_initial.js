@@ -7,6 +7,8 @@ exports.up = async (knex) => {
       .unique()
     table.string("name").notNullable()
     table.string("password").notNullable()
+    table.string("avatar_url")
+    table.string("goal")
     table.boolean("admin").defaultTo(false)
   })
   await knex.schema.createTable("regions", (table) => {
