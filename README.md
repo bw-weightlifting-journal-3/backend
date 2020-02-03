@@ -18,21 +18,22 @@ Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 
 ## Users
 
-| Endpoint   | Method | Body           | Description                                                               |
-| ---------- | ------ | -------------- | ------------------------------------------------------------------------- |
-| /api/user  | GET    |                | Returns a single user (based on JWT), includes nested exercises and sets. |
-| /api/users | GET    | { page_number } | If user is an admin, it will return all users (10 users per page)         |
+| Endpoint   | Method | Body                                         | Description                                                               |
+| ---------- | ------ | -------------------------------------------- | ------------------------------------------------------------------------- |
+| /api/user  | GET    |                                              | Returns a single user (based on JWT), includes nested exercises and sets. |
+| /api/user  | POST   | { email, name , password, avatar_url, goal } | Returns the new user |
+| /api/users | GET    | { page_number }                              | If user is an admin, it will return all users (10 users per page)         |
 
 ## Exercises
 
 `timestamp` is in unix/epoch format
 
-| Endpoint           | Method | Body                      | Description                                                |
-| ------------------ | ------ | ------------------------- | ---------------------------------------------------------- |
-| /api/exercises     | GET    |                           | Returns list of exercises with nested sets (based on JWT). |
+| Endpoint           | Method | Body                           | Description                                                |
+| ------------------ | ------ | ------------------------------ | ---------------------------------------------------------- |
+| /api/exercises     | GET    |                                | Returns list of exercises with nested sets (based on JWT). |
 | /api/exercises     | POST   | { name, timestamp, region_id } | Adds a new exercise to user (based on JWT)                 |
 | /api/exercises/:id | PUT    | { name, timestamp, region_id } | Update an existing exercise by `:id`                       |
-| /api/exercises/:id | DELETE |                           | Delete an exercise by `:id`                                |
+| /api/exercises/:id | DELETE |                                | Delete an exercise by `:id`                                |
 
 ## Sets
 
