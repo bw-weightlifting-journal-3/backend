@@ -1,7 +1,7 @@
 const db = require("../data/dbConfig")
 
-const find = () => {
-  return db("sets")
+const find = (id) => {
+  return db("sets").where("exercise_id", id)
 }
 
 const findBy = (filter) => {
@@ -16,7 +16,8 @@ const findById = (id) => {
     .first()
 }
 
-const add = async (set) => {
+const add = async (set, exercise_id) => {
+  set = { ...set, exercise_id}
   const [id] = await db("sets").insert(set, "id")
   return findById(id)
 }
