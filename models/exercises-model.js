@@ -17,7 +17,7 @@ const findById = async (id) => {
   const sets = await db("sets")
     .where("exercise_id", exercise.id)
     .select("id", "reps", "weight")
-  return {...exercise, sets}
+  return {...exercise, sets: await sets}
 }
 
 const add = async (exercise, user_id) => {

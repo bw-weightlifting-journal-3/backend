@@ -19,7 +19,7 @@ const findById = async (id) => {
     .first("id", "email", "name")
   const exercises = await db("exercises")
     .where("user_id", id)
-    .select("id", "name", "timestamp")
+    .select("id")
   const withSets = Promise.all(
     exercises.map(async (exercise) => {
       const exerciseWithSets = await exercisesModel.findById(exercise.id)
