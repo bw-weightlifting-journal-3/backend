@@ -5,7 +5,7 @@ const router = express.Router({mergeParams: true})
 
 router.get("/", async (req, res, next) => {
   try {
-    const sets = await setsModel.find()
+    const sets = await setsModel.find(req.params.id)
     res.json(sets)
   } catch (err) {
     next(err)
@@ -14,8 +14,17 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:set_id", async (req, res, next) => {
   try {
-    const set = await setsModel.findById(req.params.set_id, id)
+    const set = await setsModel.findById(req.params.set_id)
     res.json(set)
+  } catch (err) {
+    next(err)
+  }
+})
+
+router.post("/", async (req, res, next) => {
+  try {
+    const set = await setsModel.add(req.body, req.params.id)
+    res.status(201).json(set)
   } catch (err) {
     next(err)
   }
@@ -32,7 +41,7 @@ router.put("/", async (req, res, next) => {
 
 router.delete("/:set_id", async (req, res, next) => {
   try {
-    const set = await setsModel.findById(req.params.set_id, id)
+    const set = await setsModel.findById(req.params.set_id, req.params.id)
     await setsModel.remove(req.params.id)
     res.status(204).json({message: `${set.name} has been deleted`})
   } catch (err) {
