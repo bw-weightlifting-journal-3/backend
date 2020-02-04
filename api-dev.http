@@ -55,3 +55,23 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6
   "name": "Deadlift",
   "timestamp": 1580533729
 }
+
+###
+GET https://localhost:4000/api/exercises/1/sets
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA4MzU4OTAsImV4cCI6MTU4MDkyMjI5MH0.eyHqbQxN9eoqd2DZzxjGKGiTaAipkwVMlXFqkZD_ee4
+###
+GET https://localhost:4000/api/exercises/1/sets/1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA4MzU4OTAsImV4cCI6MTU4MDkyMjI5MH0.eyHqbQxN9eoqd2DZzxjGKGiTaAipkwVMlXFqkZD_ee4
+
+###
+POST https://localhost:4000/api/exercises/1/sets
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA4MzU4OTAsImV4cCI6MTU4MDkyMjI5MH0.eyHqbQxN9eoqd2DZzxjGKGiTaAipkwVMlXFqkZD_ee4
+
+{
+  "exercise_id": 1,
+  "reps": 4,
+  "weight": "125"
+}
