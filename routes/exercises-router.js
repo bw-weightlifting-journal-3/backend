@@ -23,7 +23,7 @@ router.get("/:id", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const exercise = await exercisesModel.add(req.body)
+    const exercise = await exercisesModel.add(req.body, req.user.id)
     res.status(201).json(exercise)
   } catch (err) {
     next(err)
