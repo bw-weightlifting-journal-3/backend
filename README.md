@@ -39,7 +39,7 @@ Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 
 | Endpoint                         | Method | Body             | Description                             |
 | -------------------------------- | ------ | ---------------- | --------------------------------------- |
-| /api/sets | GET    |                  | Returns list of sets for `:exercise_id` |
-| /api/sets | POST   | { reps, weight } | Add new set to `:exercise_id`           |
+| /api/exercises/:id/sets          | GET    |                  | Returns list of sets for `:exercise_id` |
+| /api/exercises/:id/sets          | POST   | { reps, weight } | Add new set to `:exercise_id`           |
 | /api/sets/:set_id                | PUT    | { reps, weight } | Update existing set by `:set_id`        |
 | /api/sets/:set_id                | DELETE |                  | Delete a set by `:set_id`               |
