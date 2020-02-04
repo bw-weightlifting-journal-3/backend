@@ -24,7 +24,7 @@ server.use(logger())
 server.use("/api/", authRouter)
 server.use("/api/", authenticate, usersRouter)
 server.use("/api/exercises", authenticate, exercisesRouter)
-server.use("/api/sets", authenticate, setsRouter)
+server.use("/api/exercises/:id/sets", authenticate, setsRouter)
 server.use("/api/regions", authenticate, regionsRouter)
 
 server.get("/", (req, res) => {
