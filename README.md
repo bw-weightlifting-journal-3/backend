@@ -21,7 +21,7 @@ Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 | Endpoint   | Method | Body                                         | Description                                                               |
 | ---------- | ------ | -------------------------------------------- | ------------------------------------------------------------------------- |
 | /api/user  | GET    |                                              | Returns a single user (based on JWT), includes nested exercises and sets. |
-| /api/user  | POST   | { email, name , password, avatar_url, goal } | Returns the new user |
+| /api/user  | PUT    | { email, name , password, avatar_url, goal } | Returns the new user                                                      |
 | /api/users | GET    | { page_number }                              | If user is an admin, it will return all users (10 users per page)         |
 
 ## Exercises
@@ -37,9 +37,9 @@ Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 
 ## Sets
 
-| Endpoint                         | Method | Body             | Description                             |
-| -------------------------------- | ------ | ---------------- | --------------------------------------- |
-| /api/exercises/:id/sets          | GET    |                  | Returns list of sets for `:exercise_id` |
-| /api/exercises/:id/sets          | POST   | { reps, weight } | Add new set to `:exercise_id`           |
-| /api/exercises/:id/sets/:set_id                | PUT    | { reps, weight } | Update existing set by `:set_id`        |
-| /api/exercises/:id/sets/:set_id                | DELETE |                  | Delete a set by `:set_id`               |
+| Endpoint                        | Method | Body             | Description                             |
+| ------------------------------- | ------ | ---------------- | --------------------------------------- |
+| /api/exercises/:id/sets         | GET    |                  | Returns list of sets for `:exercise_id` |
+| /api/exercises/:id/sets         | POST   | { reps, weight } | Add new set to `:exercise_id`           |
+| /api/exercises/:id/sets/:set_id | PUT    | { reps, weight } | Update existing set by `:set_id`        |
+| /api/exercises/:id/sets/:set_id | DELETE |                  | Delete a set by `:set_id`               |
