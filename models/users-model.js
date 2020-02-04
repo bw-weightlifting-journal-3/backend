@@ -22,8 +22,8 @@ const findById = async (id) => {
     .select("id", "name", "timestamp")
   const withSets = Promise.all(
     exercises.map(async (exercise) => {
-      const sets = await exercisesModel.findById(exercise.id)
-      return await { ...exercise, sets }
+      const exerciseWithSets = await exercisesModel.findById(exercise.id)
+      return await exerciseWithSets
     })
   )
   return { ...user, exercises: await withSets }
