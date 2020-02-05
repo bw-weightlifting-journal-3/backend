@@ -77,3 +77,13 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6
   "reps": 4,
   "weight": "125"
 }
+
+###
+PUT https://bw-weightlifting-journal.herokuapp.com/api/exercises/1/sets/1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA4MzU4OTAsImV4cCI6MTU4MDkyMjI5MH0.eyHqbQxN9eoqd2DZzxjGKGiTaAipkwVMlXFqkZD_ee4
+
+{
+  "reps": 4,
+  "weight": "125"
+}

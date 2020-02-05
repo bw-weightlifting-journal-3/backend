@@ -46,7 +46,7 @@ content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDQyOTgsImV4cCI6MTU4MDYzMDY5OH0.gF_hgq1n1MEtz7SW0JOkYBRmfSRnr7Tar8QraRqNkmE
 
 ###
-POST https://localhost:4000/api/exercises/
+POST http://localhost:4000/api/exercises/
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDcwNDYsImV4cCI6MTU4MDYzMzQ0Nn0.mWP5uW6ELnG3SBKlWW0tXsMtuDpqbgFDvQiX-vgvsTE
 {
@@ -57,21 +57,31 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6
 }
 
 ###
-GET https://localhost:4000/api/exercises/1/sets
+GET http://localhost:4000/api/exercises/1/sets
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA4MzU4OTAsImV4cCI6MTU4MDkyMjI5MH0.eyHqbQxN9eoqd2DZzxjGKGiTaAipkwVMlXFqkZD_ee4
 ###
-GET https://localhost:4000/api/exercises/1/sets/1
+GET http://localhost:4000/api/exercises/1/sets/1
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA4MzU4OTAsImV4cCI6MTU4MDkyMjI5MH0.eyHqbQxN9eoqd2DZzxjGKGiTaAipkwVMlXFqkZD_ee4
 
 ###
-POST https://localhost:4000/api/exercises/1/sets
+POST http://localhost:4000/api/exercises/1/sets
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODA4MzU4OTAsImV4cCI6MTU4MDkyMjI5MH0.eyHqbQxN9eoqd2DZzxjGKGiTaAipkwVMlXFqkZD_ee4
 
 {
   "exercise_id": 1,
+  "reps": 4,
+  "weight": "125"
+}
+
+###
+PUT http://localhost:4000/api/exercises/1/sets/1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA4NzQ0NDEsImV4cCI6MTU4MDk2MDg0MX0.hzfUuZebKjUFow-RITzhWoqbxPFrbfalIAg2XWZQOrM
+
+{
   "reps": 4,
   "weight": "125"
 }
