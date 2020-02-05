@@ -32,7 +32,7 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:set_id", async (req, res, next) => {
   try {
-    const set = await setsModel.update(req.body, req.params.id)
+    const set = await setsModel.update(req.body, req.params.set_id)
     res.status(201).json(set)
   } catch (err) {
     next(err)
