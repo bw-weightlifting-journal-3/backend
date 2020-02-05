@@ -30,7 +30,8 @@ Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 
 | Endpoint           | Method | Body                           | Description                                                |
 | ------------------ | ------ | ------------------------------ | ---------------------------------------------------------- |
-| /api/exercises     | GET    |                                | Returns list of exercises with nested sets (based on JWT). |
+| /api/exercises     | GET    |                                | Returns list of all exercises.                             |
+| /api/exercises/:id | GET    |                                | Returns list of exercises with nested sets (based on JWT). |
 | /api/exercises     | POST   | { name, timestamp, region_id } | Adds a new exercise to user (based on JWT)                 |
 | /api/exercises/:id | PUT    | { name, timestamp, region_id } | Update an existing exercise by `:id`                       |
 | /api/exercises/:id | DELETE |                                | Delete an exercise by `:id`                                |
