@@ -21,7 +21,7 @@ Deployed on Heroku: https://bw-weightlifting-journal.herokuapp.com/
 | Endpoint   | Method | Body                                         | Description                                                               |
 | ---------- | ------ | -------------------------------------------- | ------------------------------------------------------------------------- |
 | /api/user  | GET    |                                              | Returns a single user (based on JWT), includes nested exercises and sets. |
-| /api/user  | PUT    | { email, name , password, avatar_url, goal } | Returns the new user                                                      |
+| /api/user  | PUT    | { email, name , password, avatar_url (optional), goal (optional) } | Returns the new user                                                      |
 | /api/users | GET    | { page_number }                              | If user is an admin, it will return all users (10 users per page)         |
 
 ## Exercises
