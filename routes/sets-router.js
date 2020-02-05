@@ -30,9 +30,9 @@ router.post("/", async (req, res, next) => {
   }
 })
 
-router.put("/", async (req, res, next) => {
+router.put("/:set_id", async (req, res, next) => {
   try {
-    const set = await setsModel.update(req.body)
+    const set = await setsModel.update(req.body, req.params.id)
     res.status(201).json(set)
   } catch (err) {
     next(err)

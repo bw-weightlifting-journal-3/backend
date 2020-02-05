@@ -22,7 +22,7 @@ const findById = async (id) => {
 
 const add = async (exercise, user_id) => {
   exercise = {...exercise, user_id}
-  const [id] = await db("exercises").insert(exercise, "id")
+  const [id] = await db("exercises").insert(exercise, process.env.NODE_ENV === "production"? "id": null)
   return findById(id)
 }
 

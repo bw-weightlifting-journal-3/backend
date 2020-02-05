@@ -31,7 +31,7 @@ const findById = async (id) => {
 
 const add = async ({ email, name, password, admin }) => {
   password = await bcrypt.hash(password, 12)
-  const [id] = await db("users").insert({ email, name, password, admin }, "id")
+  const [id] = await db("users").insert({ email, name, password, admin }, process.env.NODE_ENV === "production"? "id": null)
   return findById(id)
 }
 
