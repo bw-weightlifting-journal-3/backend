@@ -61,6 +61,6 @@ describe("sets router", () => {
       .delete("/api/exercises/1/sets/1")
       .set({ Authorization: token })
     const sets = await db("sets").where({id: 1})
-    expect(sets).toBe([])
+    expect(sets).toEqual([])
   })
 })
