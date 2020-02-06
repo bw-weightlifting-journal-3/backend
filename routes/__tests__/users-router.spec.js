@@ -1,15 +1,31 @@
 const request = require("supertest")
 const db = require("../../data/dbConfig")
 const server = require("../../index")
+const jwt = require("jsonwebtoken")
+const jwtSecret = process.env.JWT_SECRET || "this is my secret passphrase"
 
 let token
 
+beforeAll(() => {
+  const generateToken = (user) => {
+    const payload = {
+      subject: user.id,
+      email: user.email
+    }
+    const options = {
+      expiresIn: "1d"
+    }
+    return jwt.sign(payload, jwtSecret, options)
+  }
+  token = generateToken({ id: 1, email: "me@me.com" })
+})
+
 beforeEach(async () => {
   await db.seed.run()
-  const login = await request(server)
-    .post("/api/login")
-    .send({ email: "me@me.com", password: "password" })
-  token = login.body.token
+  // const login = await request(server)
+  //   .post("/api/login")
+  //   .send({ email: "me@me.com", password: "password" })
+  // token = login.body.token
 })
 
 describe("users router", () => {
