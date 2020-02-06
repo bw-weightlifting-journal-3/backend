@@ -2,8 +2,11 @@ const bcrypt = require("bcryptjs")
 const db = require("../data/dbConfig")
 const exercisesModel = require("./exercises-model")
 
-const find = () => {
+const find = (user) => {
+  if (user.admin) {
   return db("users").select("id", "email", "name")
+  }
+  return []
 }
 
 const findBy = (filter) => {
