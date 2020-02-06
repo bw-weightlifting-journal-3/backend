@@ -12,51 +12,55 @@ beforeEach(async () => {
   token = login.body.token
 })
 
-describe("exercises router", () => {
-  test("get list of exercises return 200 and json object", async () => {
+afterAll(async ()=>{
+  await db.destroy()
+})
+
+describe("sets router", () => {
+  test("get list of sets return 200 and json object", async () => {
     const res = await request(server)
-      .get("/api/exercises")
+      .get("/api/exercises/1/sets")
       .set({ Authorization: token })
     expect(res.status).toBe(200)
     expect(res.type).toBe("application/json")
   })
 
-  test("get list of exercises return 2 items", async () => {
+  test("get list of sets return 2 items", async () => {
     const res = await request(server)
-      .get("/api/exercises")
+      .get("/api/exercises/2/sets")
       .set({ Authorization: token })
     expect(res.body.length).toBe(2)
   })
 
-  test("add exercise returns 201 and json object", async () => {
+  test("add a set returns 201 and json object", async () => {
     const res = await request(server)
-      .post("/api/exercises")
-      .send({ name: "Clean", timestamp: Date.now(), region_id: 1 })
+      .post("/api/exercises/2/sets")
+      .send({ reps: 10, weight: 100 })
       .set({ Authorization: token })
     expect(res.status).toBe(201)
     expect(res.type).toBe("application/json")
   })
 
-  test("add exercise returns name", async () => {
+  test("add a set returns reps", async () => {
     const res = await request(server)
-      .post("/api/exercises")
-      .send({ name: "Clean", timestamp: Date.now(), region_id: 1 })
+      .post("/api/exercises/2/sets")
+      .send({ reps: 10, weight: 100 })
       .set({ Authorization: token })
-    expect(res.body.name).toBe("Clean")
+    expect(res.body.reps).toBe(10)
   })
 
-  test("delete exercise", async () => {
+  test("delete set", async () => {
     const res = await request(server)
-      .delete("/api/exercises/1")
+      .delete("/api/exercises/2/sets/1")
       .set({ Authorization: token })
     expect(res.status).toBe(204)
   })
 
-  test("delete exercise", async () => {
+  test("delete set", async () => {
     const res = await request(server)
-      .delete("/api/exercises/1")
+      .delete("/api/exercises/1/sets/1")
       .set({ Authorization: token })
-    const exercises = await db("exercises")
-    expect(exercises.length).toBe(5)
+    const sets = await db("sets").where({id: 1})
+    expect(sets).toBe([])
   })
 })

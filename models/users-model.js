@@ -9,7 +9,7 @@ const find = () => {
 const findBy = (filter) => {
   return db("users")
     .where(filter)
-    .select(["id", "email", "password"])
+    .select(["id", "email", "name","password", "avatar_url", "goal"])
     .first()
 }
 
@@ -39,7 +39,7 @@ const update = async (user, id) => {
   await db("users")
     .where({ id })
     .update(user)
-  return findById(id)
+  return findBy({id})
 }
 
 const remove = (id) => {

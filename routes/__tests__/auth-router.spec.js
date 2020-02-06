@@ -10,14 +10,14 @@ describe("auth router", () => {
   test("register a new user", async () => {
     const res = await request(server)
       .post("/api/register")
-      .send({ email: "me8@me.com", name: "me", password: "password" })
+      .send({ email: "me4@me.com", name: "me", password: "password" })
     expect(res.status).toBe(201)
   })
   test("register a new user", async () => {
     const res = await request(server)
       .post("/api/register")
-      .send({ email: "me8@me.com", name: "me", password: "password" })
-    expect(res.body.email).toBe("me8@me.com")
+      .send({ email: "me5@me.com", name: "me", password: "password" })
+    expect(res.body.email).toBe("me5@me.com")
   })
   test("login user with correct password", async () => {
     const res = await request(server)

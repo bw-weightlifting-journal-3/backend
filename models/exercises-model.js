@@ -1,7 +1,7 @@
 const db = require("../data/dbConfig")
 
-const find = (id) => {
-  return db("exercises").where("user_id", id)
+const find = (user_id) => {
+  return db("exercises").where("user_id", user_id)
 }
 
 const findBy = (filter) => {
@@ -10,9 +10,9 @@ const findBy = (filter) => {
     .first()
 }
 
-const findById = async (id) => {
+const findById = async (user_id) => {
   const exercise = await db("exercises")
-    .where({ id })
+    .where({ id: user_id })
     .first()
   const sets = await db("sets")
     .where("exercise_id", exercise.id)

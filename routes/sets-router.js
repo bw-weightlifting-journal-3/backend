@@ -42,8 +42,8 @@ router.put("/:set_id", async (req, res, next) => {
 router.delete("/:set_id", async (req, res, next) => {
   try {
     const set = await setsModel.findById(req.params.set_id, req.params.id)
-    await setsModel.remove(req.params.id)
-    res.status(204).json({message: `${set.name} has been deleted`})
+    await setsModel.remove(req.params.set_id)
+    res.status(204).json({message: `set has been deleted`})
   } catch (err) {
     next(err)
   }

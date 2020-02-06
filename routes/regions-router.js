@@ -32,9 +32,9 @@ router.post("/", async (req, res, next) => {
 
 router.delete("/:id", async (req, res, next) => {
   try {
-    const item = await regionsModel.findById(req.params.id)
+    const region = await regionsModel.findById(req.params.id)
     await regionsModel.remove(req.params.id)
-    res.status(204).json({message: `${item.name} has been deleted`})
+    res.status(204).json({message: `${region.name} has been deleted`})
   } catch (err) {
     next(err)
   }

@@ -1,7 +1,7 @@
 const db = require("../data/dbConfig")
 
-const find = (id) => {
-  return db("sets").where("exercise_id", id)
+const find = (exercise_id) => {
+  return db("sets").where("exercise_id", exercise_id)
 }
 
 const findBy = (filter) => {
