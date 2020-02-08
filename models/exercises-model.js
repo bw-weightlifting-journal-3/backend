@@ -10,27 +10,37 @@ const findBy = (filter) => {
     .first()
 }
 
-const findById = async (user_id) => {
+const findById = async (id, user_id) => {
   const exercise = await db("exercises")
-    .where({ id: user_id })
+    .where({ id })
     .first()
-  const sets = await db("sets")
-    .where("exercise_id", exercise.id)
-    .select("id", "reps", "weight")
-  return {...exercise, sets: await sets}
+
+  if (exercise.user_id === user_id) {
+    const sets = await db("sets")
+      .where("exercise_id", exercise.id)
+      .select("id", "reps", "weight")
+    return { ...exercise, sets: await sets }
+  } else {
+    throw new Error("Unauthorized")
+  }
 }
 
 const add = async (exercise, user_id) => {
-  exercise = {...exercise, user_id}
-  const [id] = await db("exercises").insert(exercise, process.env.NODE_ENV === "production"? "id": null)
-  return findById(id)
+  exercise = { ...exercise, user_id }
+  const [id] = await db("exercises").insert(exercise, process.env.NODE_ENV === "production" ? "id" : null)
+  console.log(id)
+  return findById(id, user_id)
 }
 
-const update = async (exercise, id) => {
-  await db("exercises")
-    .where({ id })
-    .update(exercise)
-  return findById(id)
+const update = async (exercise, id, user_id) => {
+  if (findById(id, user_id) !== {}) {
+    await db("exercises")
+      .where({ id })
+      .update(exercise)
+    return findById(id, user_id)
+  } else {
+    throw new Error
+  }
 }
 
 const remove = (id) => {

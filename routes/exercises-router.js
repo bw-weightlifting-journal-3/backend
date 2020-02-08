@@ -14,7 +14,7 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const exercises = await exercisesModel.findById(req.params.id)
+    const exercises = await exercisesModel.findById(req.params.id, req.user.id)
     res.json(exercises)
   } catch (err) {
     next(err)
@@ -32,7 +32,7 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
   try {
-    const exercise = await exercisesModel.update(req.body, req.params.id)
+    const exercise = await exercisesModel.update(req.body, req.params.id, req.user.id)
     res.json(exercise)
   } catch (err) {
     next(err)

@@ -12,7 +12,11 @@ const server = express()
 const port = process.env.PORT || 4000
 
 const logger = () => (req, res, next) => {
-  console.log(`[${new Date().toISOString()}]: ${req.method} - ${req.url} - ${req.params} - ${req.ip} \n`, req.body)
+  console.log(
+    `[${new Date().toISOString()}]: ${req.method} - ${req.url} `,
+    req.params ? req.params : null` - ${req.ip} \n`,
+    req.body
+  )
   next()
 }
 
@@ -33,6 +37,7 @@ server.get("/", (req, res) => {
 
 server.use((err, req, res, next) => {
   console.log(err)
+  if (err.message){ res.status(500).json({message: err.message})}
   res.status(500).json({ message: err })
 })
 
