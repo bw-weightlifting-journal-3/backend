@@ -21,7 +21,6 @@ const logger = () => (req, res, next) => {
 }
 
 server.use(cors())
-server.use(helmet())
 server.use(express.json())
 server.use(logger())
 
