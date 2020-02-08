@@ -12,7 +12,7 @@ const server = express()
 const port = process.env.PORT || 4000
 
 const logger = () => (req, res, next) => {
-  console.log(`[${new Date().toISOString()}]: ${req}`)
+  console.log(`[${new Date().toISOString()}]:`, req)
   next()
 }
 
