@@ -49,9 +49,20 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6
 POST http://localhost:4000/api/exercises/
 content-type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
+
 {
   "region_id": 4,
   "name": "Deadlift",
+  "timestamp": 1580533729
+}
+###
+PUT http://localhost:4000/api/exercises/1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
+
+{
+  "region_id": 4,
+  "name": "Alivelift",
   "timestamp": 1580533729
 }
 
