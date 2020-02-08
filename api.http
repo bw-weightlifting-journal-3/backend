@@ -3,9 +3,9 @@ POST https://bw-weightlifting-journal.herokuapp.com/api/register/
 content-type: application/json
 
 {
-  "email":"me12@me.com",
+  "email":"me2@me.com",
   "name": "Me",
-  "password": "password2",
+  "password": "password1",
   "admin":"false"
 }
 
@@ -14,74 +14,72 @@ POST https://bw-weightlifting-journal.herokuapp.com/api/login/
 content-type: application/json
 
 {
-    "email": "me@me.com",
-    "password": "password"
+    "email": "me2@me.com",
+    "password": "password1"
 }
 
 ###
 GET https://bw-weightlifting-journal.herokuapp.com/api/user
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 ###
 GET https://bw-weightlifting-journal.herokuapp.com/api/users
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 ###
 GET https://bw-weightlifting-journal.herokuapp.com/api/regions
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 ###
 GET https://bw-weightlifting-journal.herokuapp.com/api/regions/2
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 ###
 GET https://bw-weightlifting-journal.herokuapp.com/api/exercises
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 ###
-GET https://bw-weightlifting-journal.herokuapp.com/api/exercises/1
+GET https://bw-weightlifting-journal.herokuapp.com/api/exercises/14
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 ###
 POST https://bw-weightlifting-journal.herokuapp.com/api/exercises/
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 {
-  "user_id": 1,
   "region_id": 4,
   "name": "Deadlift",
-  "timestamp": 1580533729
+  "timestamp": 1581125467421
 }
 
 ###
-GET https://bw-weightlifting-journal.herokuapp.com/api/exercises/9/sets
+GET https://bw-weightlifting-journal.herokuapp.com/api/exercises/17/sets
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 ###
-GET https://bw-weightlifting-journal.herokuapp.com/api/exercises/9/sets/28
+GET https://bw-weightlifting-journal.herokuapp.com/api/exercises/14/sets/28
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 ###
-POST https://bw-weightlifting-journal.herokuapp.com/api/exercises/9/sets
+POST https://bw-weightlifting-journal.herokuapp.com/api/exercises/17/sets
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 {
-  "exercise_id": 1,
-  "reps": 4,
+  "reps": "4",
   "weight": "125"
 }
 
 ###
 PUT https://bw-weightlifting-journal.herokuapp.com/api/exercises/9/sets/28
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI
 
 {
   "reps": 4,
@@ -91,4 +89,4 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6
 ###
 DELETE https://bw-weightlifting-journal.herokuapp.com/api/exercises/1/sets/29
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoxLCJlbWFpbCI6Im1lQG1lLmNvbSIsImlhdCI6MTU4MDk5MTM2OCwiZXhwIjoxNTgxMDc3NzY4fQ.EOOKUdmzaJ5KlXOJI8TmKlv6Czv49W5CFE7FBHG3pXE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExMjYwMjUsImV4cCI6MTU4MTIxMjQyNX0.QIf0QJI2XQRcWHeA_di1NoTwXE_eQ44zppjEVHgwgzI

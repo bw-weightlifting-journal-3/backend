@@ -13,44 +13,43 @@ POST http://localhost:4000/api/login/
 content-type: application/json
 
 {
-    "email": "me7@me.com",
-    "password": "password2"
+    "email": "me2@me.com",
+    "password": "password1"
 }
 
 ###
 GET http://localhost:4000/api/user
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6Im1lNkBtZS5jb20iLCJpYXQiOjE1ODA1NDY4MzAsImV4cCI6MTU4MDYzMzIzMH0.L90__sjoaNdLD9Zj4TZVvUG2oRwaZ-tqK2TZP71oWkY
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
 
 ###
 GET http://localhost:4000/api/users
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0Ijo0LCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA0NTY0MzYsImV4cCI6MTU4MDU0MjgzNn0.vQ3JsI2_il0LvwkA-Mo6-7TEKolzEbK6_FJ5Lvq6GTI
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
 
 ###
 GET http://localhost:4000/api/regions
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDQyOTgsImV4cCI6MTU4MDYzMDY5OH0.gF_hgq1n1MEtz7SW0JOkYBRmfSRnr7Tar8QraRqNkmE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
 ###
 GET http://localhost:4000/api/regions/1
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDQyOTgsImV4cCI6MTU4MDYzMDY5OH0.gF_hgq1n1MEtz7SW0JOkYBRmfSRnr7Tar8QraRqNkmE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
 
 ###
 GET http://localhost:4000/api/exercises
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDQyOTgsImV4cCI6MTU4MDYzMDY5OH0.gF_hgq1n1MEtz7SW0JOkYBRmfSRnr7Tar8QraRqNkmE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
 ###
 GET http://localhost:4000/api/exercises/1
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDQyOTgsImV4cCI6MTU4MDYzMDY5OH0.gF_hgq1n1MEtz7SW0JOkYBRmfSRnr7Tar8QraRqNkmE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
 
 ###
 POST http://localhost:4000/api/exercises/
 content-type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJlbWFpbCI6Im1lM0BtZS5jb20iLCJpYXQiOjE1ODA1NDcwNDYsImV4cCI6MTU4MDYzMzQ0Nn0.mWP5uW6ELnG3SBKlWW0tXsMtuDpqbgFDvQiX-vgvsTE
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJlbWFpbCI6Im1lMkBtZS5jb20iLCJpYXQiOjE1ODExNzc1MjcsImV4cCI6MTU4MTI2MzkyN30.pCuuWdiMjyIUTKt5gdfmRKTWk_gv2MxvJLz1XrwQh3o
 {
-  "user_id": 1,
   "region_id": 4,
   "name": "Deadlift",
   "timestamp": 1580533729
