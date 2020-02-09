@@ -17,7 +17,8 @@ const findById = (id) => {
 }
 
 const add = async (region) => {
-  const [id] = await db("regions").insert(region, process.env.NODE_ENV === "production"? "id": null)
+  const pgReturn = process.env.NODE_ENV === "production" ? "id" : null
+  const [id] = await db("regions").insert(region, pgReturn)
   return findById(id)
 }
 

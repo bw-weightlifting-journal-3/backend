@@ -26,8 +26,9 @@ const findById = async (id, user_id) => {
 }
 
 const add = async (exercise, user_id) => {
+  const pgReturn = process.env.NODE_ENV === "production" ? "id" : null
   exercise = { ...exercise, user_id }
-  const [id] = await db("exercises").insert(exercise, process.env.NODE_ENV === "production" ? "id" : null)
+  const [id] = await db("exercises").insert(exercise, pgReturn)
   console.log(id)
   return findById(id, user_id)
 }

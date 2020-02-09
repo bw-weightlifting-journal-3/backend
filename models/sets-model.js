@@ -18,7 +18,8 @@ const findById = (id) => {
 
 const add = async (set, exercise_id) => {
   set = { ...set, exercise_id}
-  const [id] = await db("sets").insert(set, process.env.NODE_ENV === "production"? "id": null)
+  const pgReturn = process.env.NODE_ENV === "production" ? "id" : null
+  const [id] = await db("sets").insert(set, pgReturn)
   return findById(id)
 }
 
