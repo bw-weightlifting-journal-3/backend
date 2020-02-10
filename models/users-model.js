@@ -25,7 +25,7 @@ const findById = async (id) => {
     .select("id")
   const withSets = Promise.all(
     exercises.map(async (exercise) => {
-      const exerciseWithSets = await exercisesModel.findById(exercise.id)
+      const exerciseWithSets = await exercisesModel.findById(exercise.id, id)
       return await exerciseWithSets
     })
   )
